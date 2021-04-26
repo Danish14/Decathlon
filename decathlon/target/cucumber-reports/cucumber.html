@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Cucumber</title>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22ml-3%20ml-md-0%22%20viewBox%3D%220%200%2040.59%2046.31%22%20width%3D%2240.59%22%20height%3D%2246.31%22%3E%0A%20%20%20%20%3Cg%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%2323d96c%22%20fill-rule%3D%22evenodd%22%20d%3D%22M30.283%203.645q-.528-.317-1.08-.593a16.164%2016.164%200%2000-1.154-.518c-.124-.052-.247-.1-.372-.149-.343-.127-.689-.268-1.042-.371a19.427%2019.427%200%2010-9.792%2037.51v5.56c11.676-1.753%2022.016-10.979%2022.787-23.093.459-7.289-3.193-14.73-9.347-18.346z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%23173647%22%20d%3D%22M15.787%2046.307v-5.935A20.472%2020.472%200%201126.959%201.015c.274.08.557.187.832.291l.248.093c.165.064.291.113.417.167.348.137.739.313%201.208.543q.589.295%201.153.633c6.393%203.756%2010.354%2011.518%209.857%2019.316-.763%2012-10.722%2022.122-23.679%2024.067zm4.8-44.214h-.026a18.366%2018.366%200%2000-3.524%2036.408l.85.165v5.18c11.392-2.224%2020.009-11.272%2020.686-21.922.448-7.033-3.1-14.018-8.83-17.383l-.008-.005A14.691%2014.691%200%200027.654%203.5a5.74%205.74%200%2000-.344-.138l-.27-.1a9.49%209.49%200%2000-.708-.249%2018.425%2018.425%200%2000-5.743-.92z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%23173647%22%20fill-rule%3D%22evenodd%22%20d%3D%22M16.666%2010.58a1.8%201.8%200%20011.583.608%204.184%204.184%200%2001.728%201.107c.645%201.422%201.027%203.461.23%204.605a6.334%206.334%200%2001-3.981-3.087%203.236%203.236%200%2001-.347-1.339%201.957%201.957%200%20011.787-1.894zm-5.683%208.025a7.742%207.742%200%20001.218.737%205.789%205.789%200%20004.883-.138%206.116%206.116%200%2000-3.345-3.45%203.664%203.664%200%2000-1.442-.321%201.884%201.884%200%2000-.319%200%201.766%201.766%200%2000-.995%203.172zm6.1%203.433c-.777-.518-2.379-.309-3.312-.292a4.416%204.416%200%2000-1.666.352%203.5%203.5%200%2000-1.218.738%201.817%201.817%200%20001.409%203.171%203.3%203.3%200%20001.442-.321c1.436-.62%203.141-2.32%203.346-3.648zm2.61%202a6.556%206.556%200%2000-3.724%203.506%203.091%203.091%200%2000-.321%201.314%201.907%201.907%200%20003.3%201.346%207.422%207.422%200%2000.7-1.218c.621-1.333.866-3.72.046-4.948zm2.557-7.167a5.941%205.941%200%20003.7-3.167%203.243%203.243%200%2000.319-1.346%201.915%201.915%200%2000-1.794-1.954%201.832%201.832%200%2000-1.6.641%207.382%207.382%200%2000-.705%201.218c-.62%201.434-.842%203.48.081%204.603zm4.208%2012.115a3.244%203.244%200%2000-.321-1.345%205.869%205.869%200%2000-3.554-3.269%205.386%205.386%200%2000-.226%204.711%204.147%204.147%200%2000.7%201.121c1.133%201.23%203.505.32%203.402-1.218zm4.2-6.28a7.466%207.466%200%2000-1.217-.7%204.425%204.425%200%2000-1.666-.352%206.4%206.4%200%2000-3.188.555%205.959%205.959%200%20003.316%203.386%203.672%203.672%200%20001.442.32%201.8%201.8%200%20001.31-3.209z%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E">
+	<style>
+.cucumber-react .cucumber-status--passed {
+  color: #2CB14A;
+}
+.cucumber-react .cucumber-status--skipped {
+  color: #00A0CC;
+}
+.cucumber-react .cucumber-status--pending {
+  color: #FFAD33;
+}
+.cucumber-react .cucumber-status--undefined {
+  color: #FFAD33;
+}
+.cucumber-react .cucumber-status--ambiguous {
+  color: #F4EBFD;
+}
+.cucumber-react .cucumber-status--failed {
+  color: #BB0000;
+}
+.cucumber-react .cucumber-status--unknown {
+  color: #B6BECB;
+}
+.cucumber-react h1, .cucumber-react h2, .cucumber-react h3 {
+  padding: 0;
+  margin: 0;
+}
+.cucumber-react a {
+  color: inherit;
+}
+.cucumber-react .gherkin-document-list {
+  font: 14px "Open Sans", sans-serif;
+  color: #161C24;
+  background: #fff;
+  overflow-x: hidden;
+}
+.cucumber-react .cucumber-title {
+  margin-top: 0.3em;
+  margin-bottom: 0;
+  display: inline-block;
+}
+.cucumber-react .cucumber-title__keyword {
+  font-weight: bold;
+}
+.cucumber-react .cucumber-title__text {
+  font-weight: normal;
+}
+.cucumber-react .cucumber-tags {
+  padding: 0;
+  margin-bottom: 0;
+}
+.cucumber-react .cucumber-tags .cucumber-tag {
+  display: inline;
+  list-style-type: none;
+  padding: 4px 8px 4px 8px;
+  margin-right: 6px;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+}
+.cucumber-react .cucumber-feature__icon {
+  padding-top: 0.35em;
+  padding-right: 0.5em;
+}
+.cucumber-react .cucumber-description,
+.cucumber-react .cucumber-children {
+  margin-left: 1em;
+}
+.cucumber-react .cucumber-feature,
+.cucumber-react .cucumber-rule,
+.cucumber-react .cucumber-scenario,
+.cucumber-react .cucumber-background {
+  margin-bottom: 1em;
+}
+.cucumber-react .cucumber-steps {
+  list-style-type: none;
+  padding-left: 10px;
+}
+.cucumber-react .cucumber-steps .cucumber-step {
+  display: flex;
+}
+.cucumber-react .cucumber-steps .cucumber-step__status {
+  padding-top: 0.2em;
+  padding-right: 0.5em;
+}
+.cucumber-react .cucumber-steps .cucumber-step__content {
+  flex-grow: 1;
+  max-width: calc(100% - 1.5em);
+}
+.cucumber-react .cucumber-steps .cucumber-step__keyword {
+  font-weight: bold;
+}
+.cucumber-react .cucumber-steps .cucumber-step__text {
+  font-weight: normal;
+}
+.cucumber-react .cucumber-steps .cucumber-step__param {
+  font-weight: normal;
+  font-style: italic;
+}
+.cucumber-react .cucumber-table {
+  border-collapse: collapse;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.cucumber-react .cucumber-table__header-cell {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .cucumber-table__cell {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .cucumber-table__cell__status {
+  padding: 0.5em 3px 3px 3px;
+}
+.cucumber-react .cucumber-table__cell__step {
+  flex-grow: 1;
+}
+.cucumber-react .cucumber-code {
+  padding: 0.25em;
+  background-color: #ebebeb;
+}
+.cucumber-react .cucumber-error {
+  padding: 0.5em;
+  margin: 0;
+  overflow-x: auto;
+}
+.cucumber-react .cucumber-no-documents {
+  font: 14px "Open Sans", sans-serif;
+}
+.cucumber-react .cucumber-attachment__icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .cucumber-attachment__image {
+  max-width: 100%;
+  margin-top: 1em;
+}
+.cucumber-react .cucumber-attachment__text {
+  background-color: #ebebeb;
+  padding: 0.5em;
+  overflow-x: auto;
+}
+.cucumber-react .cucumber-anchor {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 0.3em;
+}
+.cucumber-react .cucumber-anchor__link {
+  opacity: 0;
+  transition: all 0.35s ease-in-out;
+  position: absolute;
+  left: -20px;
+  display: flex;
+  align-items: center;
+}
+.cucumber-react .cucumber-anchor__icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .cucumber-anchor:hover a {
+  opacity: 1;
+  width: max-content;
+  transition: all 0.35s ease-in-out;
+}
+.cucumber-react .cucumber-anchor > * {
+  height: 100%;
+  margin-top: 0px;
+}
+
+.cucumber-report-header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font: 11px "Open Sans", sans-serif;
+  margin-bottom: 1em;
+}
+.cucumber-report-header > * {
+  padding: 1em;
+}
+.cucumber-report-header .cucumber-status-filter {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cucumber-report-header .cucumber-status-filter table {
+  width: 100%;
+}
+.cucumber-report-header .cucumber-execution-data {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cucumber-report-header .cucumber-search-bar {
+  border-right: 0;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search input {
+  padding: 0.4em;
+  border-radius: 0;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search button {
+  height: 2.2em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+}
+.cucumber-report-header .cucumber-search-bar p.help {
+  font-size: 80%;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul {
+  display: inline;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li input {
+  display: inline-block;
+  width: auto;
+  height: 0.6em;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li label {
+  padding-right: 1em;
+}
+
+@media only screen and (min-width: 600px) {
+  .cucumber-report-header {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cucumber-report-header .cucumber-status-filter {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .cucumber-report-header .cucumber-search-bar {
+    grid-column: 1/-1;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .cucumber-report-header {
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+  .cucumber-report-header .cucumber-status-filter {
+    border-bottom: 0;
+  }
+  .cucumber-report-header .cucumber-execution-data {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 0;
+  }
+  .cucumber-report-header .cucumber-search-bar {
+    grid-column: auto;
+  }
+}
+.accordion {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+
+.accordion__item + .accordion__item {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.accordion__button {
+    background-color: #f4f4f4;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+}
+
+.accordion__button:hover {
+    background-color: #ddd;
+}
+
+.accordion__button:before {
+    display: inline-block;
+    content: '';
+    height: 10px;
+    width: 10px;
+    margin-right: 12px;
+    border-bottom: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    transform: rotate(-45deg);
+}
+
+.accordion__button[aria-expanded='true']::before,
+.accordion__button[aria-selected='true']::before {
+    transform: rotate(45deg);
+}
+
+.accordion__panel {
+    padding: 20px;
+    animation: fadein 0.35s ease-in;
+}
+
+	</style>
+</head>
+<body>
+<div id="content">
+</div>
+<script>
+window.CUCUMBER_MESSAGES = [{"meta":{"protocolVersion":"15.0.0","implementation":{"name":"cucumber-jvm","version":"6.10.3"},"runtime":{"name":"Java HotSpot(TM) 64-Bit Server VM","version":"25.241-b07"},"os":{"name":"Windows 10"},"cpu":{"name":"amd64"}}},{"testRunStarted":{"timestamp":{"seconds":"1619435280","nanos":6000000}}},{"source":{"uri":"file:///C:/Users/Mohd.Danish/Desktop/Danish/interview/projects/decathlon/src/test/java/platform/mobile/miscellaneous/miscellaneous.feature","data":"Feature: miscellaneous\r\n  Background:\r\n    Given Open Decathlon Mobile Applications\r\n    And Allow Permissions\r\n    And Skip Tour\r\n    And Skip Login\r\n    And Skip Navigation Tour\r\n\r\n  Scenario Outline: Search for a product. Verify the list\r\n    When Search For The \"\u003cProduct\u003e\"\r\n    Then Verify The List\r\n    Examples:\r\n      | Product |\r\n      |Glove    |\r\n\r\n  Scenario Outline: Add a product to the cart. Verify that the added product is in the cart.\r\n    When Search For The \"\u003cProduct\u003e\"\r\n    And Open The Product\r\n    And Add To Bag\r\n    And Select \"\u003cSize\u003e\"\r\n    And View Cart\r\n    Then Verify The \"\u003cProductName\u003e\" In Cart\r\n\r\n    Examples:\r\n      | Product |Size|ProductName|\r\n      |Glove    |XS/S|Adult Mountain Trekking Recycled Polyester Liner Gloves - TREK 100 Black|\r\n  Scenario Outline: Increase the number of items in the cart to 10. Verify that the total price changed.\r\n    When Search For The \"\u003cProduct\u003e\"\r\n    And Open The Product\r\n    And Add To Bag\r\n    And Select \"\u003cSize\u003e\"\r\n    And View Cart\r\n    And Increase The Items\r\n    Then Verify The \"\u003cPrice\u003e\"\r\n    Examples:\r\n      | Product |Size|Price|\r\n      |Glove    |XS/S|₹ 1,119.00|\r\n\r\n  Scenario Outline: Add another product. Verify cart change.\r\n    When Search For The \"\u003cProduct\u003e\"\r\n    And Open The Product\r\n    And Add To Bag\r\n    And Select \"\u003cSize\u003e\"\r\n    And View Cart\r\n    And Navigate Back To List\r\n    And Open Second Product\r\n    And Add To Bag\r\n    And Select \"\u003cSize2\u003e\"\r\n    And View Cart\r\n    Then Verify The \"\u003cUpdatedPrice\u003e\"\r\n    Examples:\r\n      | Product |Size|Size2|UpdatedPrice|\r\n      |Glove    |XS/S|M|₹ 1027.00     |\r\n\r\n  Scenario Outline: Remove a product from the cart. Verify the change.\r\n    When Search For The \"\u003cProduct\u003e\"\r\n    And Open The Product\r\n    And Add To Bag\r\n    And Select \"\u003cSize\u003e\"\r\n    And Open Cart\r\n    And Navigate Back To List\r\n    And Open Second Product\r\n    And Add To Bag\r\n    And Select \"\u003cSize2\u003e\"\r\n    And View Cart\r\n    And Remove Product\r\n    Then Verify The \"\u003cUpdatedPrice\u003e\"\r\n    Examples:\r\n      | Product |Size|Size2|UpdatedPrice|\r\n      |Glove    |XS/S|M|₹ 228.00     |","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///C:/Users/Mohd.Danish/Desktop/Danish/interview/projects/decathlon/src/test/java/platform/mobile/miscellaneous/miscellaneous.feature","feature":{"location":{"line":1,"column":1},"language":"en","keyword":"Feature","name":"miscellaneous","children":[{"background":{"location":{"line":2,"column":3},"keyword":"Background","steps":[{"location":{"line":3,"column":5},"keyword":"Given ","text":"Open Decathlon Mobile Applications","id":"30b37387-c1c8-4baa-a1c4-3b1dee61802b"},{"location":{"line":4,"column":5},"keyword":"And ","text":"Allow Permissions","id":"c41bb180-66e4-4f48-82d6-d3a217d5e6c9"},{"location":{"line":5,"column":5},"keyword":"And ","text":"Skip Tour","id":"d165b4d8-e0c4-4a3e-8d55-fd03c3cd2f8b"},{"location":{"line":6,"column":5},"keyword":"And ","text":"Skip Login","id":"7be46289-f24b-40d1-9db9-2e0e126f6c36"},{"location":{"line":7,"column":5},"keyword":"And ","text":"Skip Navigation Tour","id":"03f2e6c8-756b-4f78-809a-980a0571bd68"}],"id":"965e8f7f-7a8f-477a-ba44-3dcc044ceba0"}},{"scenario":{"location":{"line":9,"column":3},"keyword":"Scenario Outline","name":"Search for a product. Verify the list","steps":[{"location":{"line":10,"column":5},"keyword":"When ","text":"Search For The \"\u003cProduct\u003e\"","id":"97ccec41-c792-421b-b813-90723ae437ce"},{"location":{"line":11,"column":5},"keyword":"Then ","text":"Verify The List","id":"402c977d-6296-41a1-b608-a41d8a247018"}],"examples":[{"location":{"line":12,"column":5},"keyword":"Examples","tableHeader":{"location":{"line":13,"column":7},"cells":[{"location":{"line":13,"column":9},"value":"Product"}],"id":"25b44ec9-0a53-49d0-830f-1a3a039ad440"},"tableBody":[{"location":{"line":14,"column":7},"cells":[{"location":{"line":14,"column":8},"value":"Glove"}],"id":"adb16974-2114-47f2-94fd-33de52f34df9"}],"id":"591f23e9-dcdb-45ae-8de0-2ed0516a816d"}],"id":"621ca643-183d-4dcc-922a-ea4fac32e32b"}},{"scenario":{"location":{"line":16,"column":3},"keyword":"Scenario Outline","name":"Add a product to the cart. Verify that the added product is in the cart.","steps":[{"location":{"line":17,"column":5},"keyword":"When ","text":"Search For The \"\u003cProduct\u003e\"","id":"bd145c90-7236-44cb-928f-d4657446e3c7"},{"location":{"line":18,"column":5},"keyword":"And ","text":"Open The Product","id":"58393527-b4e0-4981-a725-08f38dd864bf"},{"location":{"line":19,"column":5},"keyword":"And ","text":"Add To Bag","id":"e08bbcf9-dbe1-4176-b0ec-34b06abf0915"},{"location":{"line":20,"column":5},"keyword":"And ","text":"Select \"\u003cSize\u003e\"","id":"73ef92e2-aaae-42a6-b518-deeb77ee2b29"},{"location":{"line":21,"column":5},"keyword":"And ","text":"View Cart","id":"3335de4b-4775-43f9-98f3-9aabe90b41be"},{"location":{"line":22,"column":5},"keyword":"Then ","text":"Verify The \"\u003cProductName\u003e\" In Cart","id":"f7326950-f051-4196-919f-f87c8742f677"}],"examples":[{"location":{"line":24,"column":5},"keyword":"Examples","tableHeader":{"location":{"line":25,"column":7},"cells":[{"location":{"line":25,"column":9},"value":"Product"},{"location":{"line":25,"column":18},"value":"Size"},{"location":{"line":25,"column":23},"value":"ProductName"}],"id":"f8b52375-f04b-49ee-96fd-2ecdb6dc69a1"},"tableBody":[{"location":{"line":26,"column":7},"cells":[{"location":{"line":26,"column":8},"value":"Glove"},{"location":{"line":26,"column":18},"value":"XS/S"},{"location":{"line":26,"column":23},"value":"Adult Mountain Trekking Recycled Polyester Liner Gloves - TREK 100 Black"}],"id":"5f904c42-9426-4166-b4ad-1c2cc059b51f"}],"id":"244ee2e6-4798-4742-a226-ec11a427d982"}],"id":"532e4f0c-a3c0-4de0-9374-9bdf317a8311"}},{"scenario":{"location":{"line":27,"column":3},"keyword":"Scenario Outline","name":"Increase the number of items in the cart to 10. Verify that the total price changed.","steps":[{"location":{"line":28,"column":5},"keyword":"When ","text":"Search For The \"\u003cProduct\u003e\"","id":"0125e71e-ed3b-46b7-920c-329d765a40c8"},{"location":{"line":29,"column":5},"keyword":"And ","text":"Open The Product","id":"ed56226c-5577-4508-b6f3-73b6f05d7167"},{"location":{"line":30,"column":5},"keyword":"And ","text":"Add To Bag","id":"4d5d3618-5035-4ac3-ada1-396bc9cb67c2"},{"location":{"line":31,"column":5},"keyword":"And ","text":"Select \"\u003cSize\u003e\"","id":"f456ab72-676f-4d3b-b800-f44d1d7a33c4"},{"location":{"line":32,"column":5},"keyword":"And ","text":"View Cart","id":"5fbf606f-f756-417d-9e3c-b070a26bf1bd"},{"location":{"line":33,"column":5},"keyword":"And ","text":"Increase The Items","id":"26d7ee44-123a-480a-8865-1fbcfe35e8c5"},{"location":{"line":34,"column":5},"keyword":"Then ","text":"Verify The \"\u003cPrice\u003e\"","id":"d433e5fb-6a7d-420d-b555-a771554d5db1"}],"examples":[{"location":{"line":35,"column":5},"keyword":"Examples","tableHeader":{"location":{"line":36,"column":7},"cells":[{"location":{"line":36,"column":9},"value":"Product"},{"location":{"line":36,"column":18},"value":"Size"},{"location":{"line":36,"column":23},"value":"Price"}],"id":"c17bb590-fcb9-444a-8d7a-8fe1cae61d58"},"tableBody":[{"location":{"line":37,"column":7},"cells":[{"location":{"line":37,"column":8},"value":"Glove"},{"location":{"line":37,"column":18},"value":"XS/S"},{"location":{"line":37,"column":23},"value":"₹ 1,119.00"}],"id":"fd0e49c1-7a85-4fc3-9c22-f53ea48b57c9"}],"id":"1d5d4292-0012-49a0-9ddf-7abdf992913d"}],"id":"d9c261a9-723a-48ab-af66-bd31730bfc6a"}},{"scenario":{"location":{"line":39,"column":3},"keyword":"Scenario Outline","name":"Add another product. Verify cart change.","steps":[{"location":{"line":40,"column":5},"keyword":"When ","text":"Search For The \"\u003cProduct\u003e\"","id":"5b3db51e-2fa1-49eb-8855-fa6b4ebcf1f5"},{"location":{"line":41,"column":5},"keyword":"And ","text":"Open The Product","id":"3e774f5b-359a-40f1-8574-8ef27218bd2e"},{"location":{"line":42,"column":5},"keyword":"And ","text":"Add To Bag","id":"85430877-6c37-4840-bd0b-0a18d3c04e27"},{"location":{"line":43,"column":5},"keyword":"And ","text":"Select \"\u003cSize\u003e\"","id":"228abfd4-879c-4349-a08a-71e6c9d154cc"},{"location":{"line":44,"column":5},"keyword":"And ","text":"View Cart","id":"8b5fa153-9651-4605-956b-7a96dffc547f"},{"location":{"line":45,"column":5},"keyword":"And ","text":"Navigate Back To List","id":"cee3f0e7-d23f-4cf2-a9fe-9b13c9a055c5"},{"location":{"line":46,"column":5},"keyword":"And ","text":"Open Second Product","id":"43b19b34-f511-4bda-96a0-38aed61330bc"},{"location":{"line":47,"column":5},"keyword":"And ","text":"Add To Bag","id":"21ef7d4f-cc14-431c-b873-8f2c7cb6c5e7"},{"location":{"line":48,"column":5},"keyword":"And ","text":"Select \"\u003cSize2\u003e\"","id":"8c06cb38-aa97-4e13-b94a-33357156cb81"},{"location":{"line":49,"column":5},"keyword":"And ","text":"View Cart","id":"bec76138-4cbf-4f32-9836-ca58725dbabb"},{"location":{"line":50,"column":5},"keyword":"Then ","text":"Verify The \"\u003cUpdatedPrice\u003e\"","id":"427343f5-d760-4cd7-a421-13f5a2d04977"}],"examples":[{"location":{"line":51,"column":5},"keyword":"Examples","tableHeader":{"location":{"line":52,"column":7},"cells":[{"location":{"line":52,"column":9},"value":"Product"},{"location":{"line":52,"column":18},"value":"Size"},{"location":{"line":52,"column":23},"value":"Size2"},{"location":{"line":52,"column":29},"value":"UpdatedPrice"}],"id":"49ce2734-699f-4e4c-a3d0-07038fd9926b"},"tableBody":[{"location":{"line":53,"column":7},"cells":[{"location":{"line":53,"column":8},"value":"Glove"},{"location":{"line":53,"column":18},"value":"XS/S"},{"location":{"line":53,"column":23},"value":"M"},{"location":{"line":53,"column":25},"value":"₹ 1027.00"}],"id":"a7dd914a-5f1d-4c88-bccb-684f93be1a0d"}],"id":"14d07489-01b1-4875-ba1b-14ff562a6801"}],"id":"5ce41108-e70c-4495-a491-300c98444878"}},{"scenario":{"location":{"line":55,"column":3},"keyword":"Scenario Outline","name":"Remove a product from the cart. Verify the change.","steps":[{"location":{"line":56,"column":5},"keyword":"When ","text":"Search For The \"\u003cProduct\u003e\"","id":"26de9e75-8f0e-4278-9c70-5adef149f9ae"},{"location":{"line":57,"column":5},"keyword":"And ","text":"Open The Product","id":"ecacf42c-9911-4555-a80f-5dc124152df5"},{"location":{"line":58,"column":5},"keyword":"And ","text":"Add To Bag","id":"f1e603fb-9c51-4984-af41-464a6b1386ad"},{"location":{"line":59,"column":5},"keyword":"And ","text":"Select \"\u003cSize\u003e\"","id":"7f1ad2f6-e849-4437-85f0-a6096e4f7b36"},{"location":{"line":60,"column":5},"keyword":"And ","text":"Open Cart","id":"d95ee68a-1260-4db4-98c3-05b1eb4217b2"},{"location":{"line":61,"column":5},"keyword":"And ","text":"Navigate Back To List","id":"f4e5d301-ca35-49c9-9051-c85879099497"},{"location":{"line":62,"column":5},"keyword":"And ","text":"Open Second Product","id":"5a002dfa-ee22-481e-9558-9214859b6097"},{"location":{"line":63,"column":5},"keyword":"And ","text":"Add To Bag","id":"066eccc8-bbbe-42b4-bafe-ae2660fc694f"},{"location":{"line":64,"column":5},"keyword":"And ","text":"Select \"\u003cSize2\u003e\"","id":"28437f47-5cc0-41ab-8dc9-80bb2239394b"},{"location":{"line":65,"column":5},"keyword":"And ","text":"View Cart","id":"0deb3f06-f515-4f7c-a5ef-6c355be9323b"},{"location":{"line":66,"column":5},"keyword":"And ","text":"Remove Product","id":"bcbc5bf1-6700-4fa2-9934-44adc5eb4a7d"},{"location":{"line":67,"column":5},"keyword":"Then ","text":"Verify The \"\u003cUpdatedPrice\u003e\"","id":"03521356-99f2-4e51-a9b0-4909143c7655"}],"examples":[{"location":{"line":68,"column":5},"keyword":"Examples","tableHeader":{"location":{"line":69,"column":7},"cells":[{"location":{"line":69,"column":9},"value":"Product"},{"location":{"line":69,"column":18},"value":"Size"},{"location":{"line":69,"column":23},"value":"Size2"},{"location":{"line":69,"column":29},"value":"UpdatedPrice"}],"id":"715a2b32-69cf-4a37-8339-08d8f594e3f3"},"tableBody":[{"location":{"line":70,"column":7},"cells":[{"location":{"line":70,"column":8},"value":"Glove"},{"location":{"line":70,"column":18},"value":"XS/S"},{"location":{"line":70,"column":23},"value":"M"},{"location":{"line":70,"column":25},"value":"₹ 228.00"}],"id":"fd5dc8c3-ad48-4285-b73f-a56f24416117"}],"id":"fabdc997-c39a-4c9a-8c98-67b9174ea76a"}],"id":"bbc182a4-cc0f-4e6c-9f23-e4c8e43a5694"}}]}}},{"pickle":{"id":"bbc003b9-063c-4162-a56a-eb6ec06db2dd","uri":"file:///C:/Users/Mohd.Danish/Desktop/Danish/interview/projects/decathlon/src/test/java/platform/mobile/miscellaneous/miscellaneous.feature","name":"Search for a product. Verify the list","language":"en","steps":[{"text":"Open Decathlon Mobile Applications","id":"e88db3e3-1c4a-4c52-93a5-eba0569415cd","astNodeIds":["30b37387-c1c8-4baa-a1c4-3b1dee61802b"]},{"text":"Allow Permissions","id":"06634b4e-8d5f-4b94-8c70-8d6fc77e1d16","astNodeIds":["c41bb180-66e4-4f48-82d6-d3a217d5e6c9"]},{"text":"Skip Tour","id":"3db7d0f6-7ff0-4305-b3df-f434f3d449a9","astNodeIds":["d165b4d8-e0c4-4a3e-8d55-fd03c3cd2f8b"]},{"text":"Skip Login","id":"c3dae70a-8e32-4f92-ab8c-1700808047fd","astNodeIds":["7be46289-f24b-40d1-9db9-2e0e126f6c36"]},{"text":"Skip Navigation Tour","id":"968522eb-8a18-490e-80ba-581925b5a07b","astNodeIds":["03f2e6c8-756b-4f78-809a-980a0571bd68"]},{"text":"Search For The \"Glove\"","id":"ed9f20a3-577e-46fb-b756-42c7da8942b3","astNodeIds":["97ccec41-c792-421b-b813-90723ae437ce","adb16974-2114-47f2-94fd-33de52f34df9"]},{"text":"Verify The List","id":"ef226547-0c5f-4290-aad1-228d6ccd9ab3","astNodeIds":["402c977d-6296-41a1-b608-a41d8a247018","adb16974-2114-47f2-94fd-33de52f34df9"]}],"astNodeIds":["621ca643-183d-4dcc-922a-ea4fac32e32b","adb16974-2114-47f2-94fd-33de52f34df9"]}},{"pickle":{"id":"4b23b861-cb3b-433b-88b3-a26a713c2c9b","uri":"file:///C:/Users/Mohd.Danish/Desktop/Danish/interview/projects/decathlon/src/test/java/platform/mobile/miscellaneous/miscellaneous.feature","name":"Add a product to the cart. Verify that the added product is in the cart.","language":"en","steps":[{"text":"Open Decathlon Mobile Applications","id":"10468268-b8cb-4916-a760-54da2eba8717","astNodeIds":["30b37387-c1c8-4baa-a1c4-3b1dee61802b"]},{"text":"Allow Permissions","id":"2aa35525-504a-4c94-bab2-551f3aba5a39","astNodeIds":["c41bb180-66e4-4f48-82d6-d3a217d5e6c9"]},{"text":"Skip Tour","id":"a558e5f4-5254-46e4-b2c5-61f99c7f4f3b","astNodeIds":["d165b4d8-e0c4-4a3e-8d55-fd03c3cd2f8b"]},{"text":"Skip Login","id":"4ecc2b46-ce42-4005-8f7a-66c768b266a3","astNodeIds":["7be46289-f24b-40d1-9db9-2e0e126f6c36"]},{"text":"Skip Navigation Tour","id":"c7136b06-b1cf-4f46-b02d-92a7505251c0","astNodeIds":["03f2e6c8-756b-4f78-809a-980a0571bd68"]},{"text":"Search For The \"Glove\"","id":"ceaa0587-dbcf-4ee1-9312-5f3b91fa9ab7","astNodeIds":["bd145c90-7236-44cb-928f-d4657446e3c7","5f904c42-9426-4166-b4ad-1c2cc059b51f"]},{"text":"Open The Product","id":"c47ff98e-7650-4db7-97d1-5caa423676ec","astNodeIds":["58393527-b4e0-4981-a725-08f38dd864bf","5f904c42-9426-4166-b4ad-1c2cc059b51f"]},{"text":"Add To Bag","id":"11c3f985-0b2c-44d8-9999-ff239c7ab569","astNodeIds":["e08bbcf9-dbe1-4176-b0ec-34b06abf0915","5f904c42-9426-4166-b4ad-1c2cc059b51f"]},{"text":"Select \"XS/S\"","id":"d2d437a0-0fc3-41df-9040-74f98db8d8e9","astNodeIds":["73ef92e2-aaae-42a6-b518-deeb77ee2b29","5f904c42-9426-4166-b4ad-1c2cc059b51f"]},{"text":"View Cart","id":"1b14c298-f932-47e6-9929-6de335a6006b","astNodeIds":["3335de4b-4775-43f9-98f3-9aabe90b41be","5f904c42-9426-4166-b4ad-1c2cc059b51f"]},{"text":"Verify The \"Adult Mountain Trekking Recycled Polyester Liner Gloves - TREK 100 Black\" In Cart","id":"df3eec50-9bdc-4a5a-b857-d08a57bdf4e5","astNodeIds":["f7326950-f051-4196-919f-f87c8742f677","5f904c42-9426-4166-b4ad-1c2cc059b51f"]}],"astNodeIds":["532e4f0c-a3c0-4de0-9374-9bdf317a8311","5f904c42-9426-4166-b4ad-1c2cc059b51f"]}},{"pickle":{"id":"3302e51e-4ffc-4938-aec5-09760bb1d631","uri":"file:///C:/Users/Mohd.Danish/Desktop/Danish/interview/projects/decathlon/src/test/java/platform/mobile/miscellaneous/miscellaneous.feature","name":"Increase the number of items in the cart to 10. Verify that the total price changed.","language":"en","steps":[{"text":"Open Decathlon Mobile Applications","id":"a4c04c5f-9461-46ab-b9f8-9781f6b9ea29","astNodeIds":["30b37387-c1c8-4baa-a1c4-3b1dee61802b"]},{"text":"Allow Permissions","id":"e5a05108-1f29-488f-b63f-3d73635a2668","astNodeIds":["c41bb180-66e4-4f48-82d6-d3a217d5e6c9"]},{"text":"Skip Tour","id":"b5ba1671-5bdf-4b5e-9aa0-3cf414d66427","astNodeIds":["d165b4d8-e0c4-4a3e-8d55-fd03c3cd2f8b"]},{"text":"Skip Login","id":"f8ce0465-695e-487d-b7b2-aa58c9d93d59","astNodeIds":["7be46289-f24b-40d1-9db9-2e0e126f6c36"]},{"text":"Skip Navigation Tour","id":"9d4b94fe-6542-4d31-98b3-161a6581404c","astNodeIds":["03f2e6c8-756b-4f78-809a-980a0571bd68"]},{"text":"Search For The \"Glove\"","id":"a4059f41-addf-460a-8771-6ec630c73657","astNodeIds":["0125e71e-ed3b-46b7-920c-329d765a40c8","fd0e49c1-7a85-4fc3-9c22-f53ea48b57c9"]},{"text":"Open The Product","id":"5161ff89-2fa8-4d13-afd6-9211b7f36e00","astNodeIds":["ed56226c-5577-4508-b6f3-73b6f05d7167","fd0e49c1-7a85-4fc3-9c22-f53ea48b57c9"]},{"text":"Add To Bag","id":"78b7def3-c43b-4471-a745-4cb3e4669c67","astNodeIds":["4d5d3618-5035-4ac3-ada1-396bc9cb67c2","fd0e49c1-7a85-4fc3-9c22-f53ea48b57c9"]},{"text":"Select \"XS/S\"","id":"3e8e6df5-f5a7-4b57-9764-d4c7b4666bbe","astNodeIds":["f456ab72-676f-4d3b-b800-f44d1d7a33c4","fd0e49c1-7a85-4fc3-9c22-f53ea48b57c9"]},{"text":"View Cart","id":"56410a5b-1440-4fb4-a23b-748342f96e2c","astNodeIds":["5fbf606f-f756-417d-9e3c-b070a26bf1bd","fd0e49c1-7a85-4fc3-9c22-f53ea48b57c9"]},{"text":"Increase The Items","id":"fe04de34-75a2-4e97-ad12-481dcc64f02c","astNodeIds":["26d7ee44-123a-480a-8865-1fbcfe35e8c5","fd0e49c1-7a85-4fc3-9c22-f53ea48b57c9"]},{"text":"Verify The \"₹ 1,119.00\"","id":"6b13d4f4-1b03-4bb0-b36f-332d8e8dee38","astNodeIds":["d433e5fb-6a7d-420d-b555-a771554d5db1","fd0e49c1-7a85-4fc3-9c22-f53ea48b57c9"]}],"astNodeIds":["d9c261a9-723a-48ab-af66-bd31730bfc6a","fd0e49c1-7a85-4fc3-9c22-f53ea48b57c9"]}},{"pickle":{"id":"b54692fa-7fbe-4718-9d50-d1063aa3aa6d","uri":"file:///C:/Users/Mohd.Danish/Desktop/Danish/interview/projects/decathlon/src/test/java/platform/mobile/miscellaneous/miscellaneous.feature","name":"Add another product. Verify cart change.","language":"en","steps":[{"text":"Open Decathlon Mobile Applications","id":"a80622e6-8258-4fd4-b1eb-873a0b19d7da","astNodeIds":["30b37387-c1c8-4baa-a1c4-3b1dee61802b"]},{"text":"Allow Permissions","id":"dc4f50cd-82bf-43b2-9b1d-a7b152ebf246","astNodeIds":["c41bb180-66e4-4f48-82d6-d3a217d5e6c9"]},{"text":"Skip Tour","id":"0dcf7e6a-cb7c-40df-a948-d4be4b0b0d68","astNodeIds":["d165b4d8-e0c4-4a3e-8d55-fd03c3cd2f8b"]},{"text":"Skip Login","id":"10a55dbe-3303-499c-b2f2-44c0b4d95d28","astNodeIds":["7be46289-f24b-40d1-9db9-2e0e126f6c36"]},{"text":"Skip Navigation Tour","id":"33a2d3e1-2203-4552-b031-8192bb61a0b8","astNodeIds":["03f2e6c8-756b-4f78-809a-980a0571bd68"]},{"text":"Search For The \"Glove\"","id":"3924b436-00bc-41a8-a81a-4dd37a1d8d1a","astNodeIds":["5b3db51e-2fa1-49eb-8855-fa6b4ebcf1f5","a7dd914a-5f1d-4c88-bccb-684f93be1a0d"]},{"text":"Open The Product","id":"65f2155e-fdf6-4bd9-99df-4f2760729ecf","astNodeIds":["3e774f5b-359a-40f1-8574-8ef27218bd2e","a7dd914a-5f1d-4c88-bccb-684f93be1a0d"]},{"text":"Add To Bag","id":"047c7007-eb14-4def-9ca6-f63870ec21ad","astNodeIds":["85430877-6c37-4840-bd0b-0a18d3c04e27","a7dd914a-5f1d-4c88-bccb-684f93be1a0d"]},{"text":"Select \"XS/S\"","id":"cb0c2d88-110e-4b54-b1fb-d274ae9c8a89","astNodeIds":["228abfd4-879c-4349-a08a-71e6c9d154cc","a7dd914a-5f1d-4c88-bccb-684f93be1a0d"]},{"text":"View Cart","id":"4ad01e9d-800e-4631-bd2c-6d902ea03872","astNodeIds":["8b5fa153-9651-4605-956b-7a96dffc547f","a7dd914a-5f1d-4c88-bccb-684f93be1a0d"]},{"text":"Navigate Back To List","id":"bcd16d29-5a19-49ea-b2d7-02cbcc7d687b","astNodeIds":["cee3f0e7-d23f-4cf2-a9fe-9b13c9a055c5","a7dd914a-5f1d-4c88-bccb-684f93be1a0d"]},{"text":"Open Second Product","id":"33e92c0a-b7aa-42d8-8639-00238d861949","astNodeIds":["43b19b34-f511-4bda-96a0-38aed61330bc","a7dd914a-5f1d-4c88-bccb-684f93be1a0d"]},{"text":"Add To Bag","id":"ff8493bf-8c83-4e99-969b-adaaac0ec2e6","astNodeIds":["21ef7d4f-cc14-431c-b873-8f2c7cb6c5e7","a7dd914a-5f1d-4c88-bccb-684f93be1a0d"]},{"text":"Select \"M\"","id":"b5aa4efd-9b2d-4311-b64a-8a43f8b06114","astNodeIds":["8c06cb38-aa97-4e13-b94a-33357156cb81","a7dd914a-5f1d-4c88-bccb-684f93be1a0d"]},{"text":"View Cart","id":"8865d251-a270-4380-8614-fc273e780fb2","astNodeIds":["bec76138-4cbf-4f32-9836-ca58725dbabb","a7dd914a-5f1d-4c88-bccb-684f93be1a0d"]},{"text":"Verify The \"₹ 1027.00\"","id":"86cdf4e0-9334-4be3-98f5-08ec0d036adb","astNodeIds":["427343f5-d760-4cd7-a421-13f5a2d04977","a7dd914a-5f1d-4c88-bccb-684f93be1a0d"]}],"astNodeIds":["5ce41108-e70c-4495-a491-300c98444878","a7dd914a-5f1d-4c88-bccb-684f93be1a0d"]}},{"pickle":{"id":"8a24488a-d051-4f0d-b675-e3cd8e365964","uri":"file:///C:/Users/Mohd.Danish/Desktop/Danish/interview/projects/decathlon/src/test/java/platform/mobile/miscellaneous/miscellaneous.feature","name":"Remove a product from the cart. Verify the change.","language":"en","steps":[{"text":"Open Decathlon Mobile Applications","id":"38dd0b3c-5875-478f-8d17-5e5dc1a34864","astNodeIds":["30b37387-c1c8-4baa-a1c4-3b1dee61802b"]},{"text":"Allow Permissions","id":"fe37396d-7328-4b67-88fa-b33077537b6f","astNodeIds":["c41bb180-66e4-4f48-82d6-d3a217d5e6c9"]},{"text":"Skip Tour","id":"122ca571-d86b-4c34-97c2-ba1bcf3a9af9","astNodeIds":["d165b4d8-e0c4-4a3e-8d55-fd03c3cd2f8b"]},{"text":"Skip Login","id":"df2b3736-315c-4930-9d7b-10b08d21160f","astNodeIds":["7be46289-f24b-40d1-9db9-2e0e126f6c36"]},{"text":"Skip Navigation Tour","id":"09d663c9-1dcd-4588-9597-6481a9004e86","astNodeIds":["03f2e6c8-756b-4f78-809a-980a0571bd68"]},{"text":"Search For The \"Glove\"","id":"42182ad7-4d84-4d71-afc8-6b4069f71f65","astNodeIds":["26de9e75-8f0e-4278-9c70-5adef149f9ae","fd5dc8c3-ad48-4285-b73f-a56f24416117"]},{"text":"Open The Product","id":"bfec626f-a87a-4367-9806-a7862e56303d","astNod
